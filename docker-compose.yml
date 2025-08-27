@@ -1,0 +1,8 @@
+services:
+  cpp:
+    build: .
+    container_name: cpp_container
+    volumes:
+      - .:/usr/src/app   # Mount current directory into container
+    working_dir: /usr/src/app
+    command: bash -c "g++ main.cpp -o main && ./main"
